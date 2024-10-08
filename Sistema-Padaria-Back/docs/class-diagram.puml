@@ -1,0 +1,61 @@
+@startuml
+
+package categories{
+    class Category{}
+}
+
+package products {
+
+    class User {
+        - id: string
+        - name: string
+        - email: string
+        - cpf: string
+        - password: string
+        - token: string
+        - created_at: timestamp
+        - updated_at: timestamp
+    
+        ~ newUser(id: string, name: string, email: string, cpf: string, password: string, token: string, created_at: timestamp, updated_at: timestamp): User
+        + setId(id: string): void
+        + getId(): string
+        + setName(name: string): void
+        + getName(): string
+        + setEmail(email: string): void
+        + getEmail(): string
+        + setCpf(cpf: string): void
+        + getCpf(): string
+        + setPassword(password: string): void
+        + getPassword(): string
+        + setToken(token: string): void
+        + getToken(): string
+        + setCreatedAt(created_at: timestamp): void
+        + getCreatedAt(): timestamp
+        + setUpdatedAt(updated_at: timestamp): void
+        + getUpdatedAt(): timestamp
+    }
+
+
+    class Product {
+        - id: string
+        - quantidade: int
+        - cor: string
+        - marca: string
+        - sku: string
+    
+        ~ newProduct(id: string, quantidade: int, cor: string, marca: string, sku: string): Product
+        + setId(id: string): void
+        + getId(): string
+        + setQuantidade(quantidade: int): void
+        + getQuantidade(): int
+        + setCor(cor: string): void
+        + getCor(): string
+        + setMarca(marca: string): void
+        + getMarca(): string
+        + setSku(sku: string): void
+        + getSku(): string
+    }
+
+}
+
+@enduml
